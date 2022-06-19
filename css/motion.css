@@ -1,0 +1,39 @@
+h1,
+h2 {
+  animation: bouncing 1.5s linear infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1 {
+    animation: fade 1.5s ease-in both;
+  }
+
+  h2 {
+    animation: none;
+  }
+}
+
+@keyframes bouncing {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
